@@ -1,0 +1,38 @@
+/*CSS 的入口文件*/
+@import "./lib/core/reset.scss";
+@import "./core/swiper-3.3.1.min.css";
+
+@import "./usage/guide.scss";
+@import "./usage/index.scss";
+@import "./usage/home.scss";
+
+
+body,html{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+html{
+	font-size: 100px;
+}
+body{
+	background: #0ff;
+	font-size: 0.14rem;
+}
+ @font-face {
+	font-family: yofont;
+	src:url("../../src/images/iconfont/iconfont.woff");
+	src:url("../../src/images/iconfont/iconfont.ttf");
+}  
+ui-view{
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: #eceef0!important;
+	@include flexbox(flex);
+	@include flex-direction(column);
+}

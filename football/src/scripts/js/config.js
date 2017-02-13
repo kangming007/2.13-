@@ -1,0 +1,32 @@
+function config($stateProvider,$urlRouterProvider){
+		$urlRouterProvider.otherwise("/guide")
+		$stateProvider
+				.state("index",{
+					url:"/index",
+					templateUrl:"./src/scripts/tpls/index.html",
+					controller:"homeController"
+				})
+				.state("index.home",{
+					url:"/home",
+					templateUrl:"./src/scripts/tpls/home.html",
+					controller:"homeController"
+				})
+				.state("index.search",{
+					url:"/search",
+					templateUrl:"./src/scripts/tpls/search.html",
+					controller:"homeController"
+				})
+				.state("index.my",{
+					url:"/my",
+					templateUrl:"./src/scripts/tpls/my.html",
+					controller:"homeController"
+				})
+
+				.state("guide",{
+					url:"/guide",
+					templateUrl:"./src/scripts/tpls/guide.html",
+					controller:"guidController"
+				})
+}
+angular.module("myApp")
+	   .config(config)
